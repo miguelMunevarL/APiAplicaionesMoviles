@@ -18,7 +18,7 @@ namespace ApiConsumos.Services
         public ToDoService(HttpClient httpClient)
         {
             _httpClient = httpClient;
-            _baseUrl = "https://192.168.100.12:45455/";
+            _baseUrl = "https://192.168.1.8:45455/";
         }
         public async Task<Todo> CreateTodoAsync(Todo todo)
         {

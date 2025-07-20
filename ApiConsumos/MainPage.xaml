@@ -6,11 +6,11 @@
 
     <VerticalStackLayout Padding="20">
 
-        <Button Text="Cargar Todos"
-                Clicked="OnLoadTodosClicked" />
+        <!--<Button Text="Cargar Todos"
+                Clicked="OnLoadTodosClicked" />-->
 
         <CollectionView x:Name="TodosListView"
-                        Margin="0,20,0,0" SelectionMode="Single" >
+                        Margin="0,20,0,0" SelectionMode="Single" SelectionChanged="TodosListView_SelectionChanged">
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -20,7 +20,17 @@
                             Padding="10">
                         <VerticalStackLayout>
                             <Label Text="{Binding Name}" FontAttributes="Bold" />
-                            <Label Text="{Binding Status, StringFormat='Completado: {true}'}" FontSize="12" />
+                            <Label FontSize="12" TextColor="White">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="True">
+                                        <Setter Property="Text" Value="Completado" />
+                                    </DataTrigger>
+                                    <DataTrigger TargetType="Label" Binding="{Binding Status}" Value="False">
+                                        <Setter Property="Text" Value="Pendiente" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+
                         </VerticalStackLayout>
                     </Border>
                 </DataTemplate>

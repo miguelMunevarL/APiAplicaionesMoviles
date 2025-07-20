@@ -1,4 +1,6 @@
 ﻿using ApiConsumos.Interfaces;
+using ApiConsumos.Models;
+using CommunityToolkit.Maui.Extensions;
 
 namespace ApiConsumos
 {
@@ -11,9 +13,12 @@ namespace ApiConsumos
         {
             InitializeComponent();
             _todoService = todoService;
+            CargarTareas();
+
+
         }
 
-        private async void OnLoadTodosClicked(object sender, EventArgs e)
+        private async void CargarTareas()
         {
             try
             {
@@ -25,6 +30,18 @@ namespace ApiConsumos
                 await DisplayAlert("Error", ex.Message, "OK");
             }
         }
+
+        private async void TodosListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.FirstOrDefault() is Todo selectedTodo)
+            {
+                var popup = new TodoDetailPopup(selectedTodo, _todoService);
+                await this.ShowPopupAsync(popup);
+                CargarTareas();  
+                TodosListView.SelectedItem = null;
+            }
+        }
+
 
 
     }
