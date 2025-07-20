@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APiAplicaionesMoviles", "APiAplicaionesMoviles\APiAplicaionesMoviles.csproj", "{D831BC2E-07C6-4848-9EBD-CBDDCD129FC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiConsumos", "ApiConsumos\ApiConsumos.csproj", "{A7DDD602-6CF7-42BF-B6D9-DB9EB7D4D5CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D831BC2E-07C6-4848-9EBD-CBDDCD129FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D831BC2E-07C6-4848-9EBD-CBDDCD129FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D831BC2E-07C6-4848-9EBD-CBDDCD129FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D831BC2E-07C6-4848-9EBD-CBDDCD129FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DDD602-6CF7-42BF-B6D9-DB9EB7D4D5CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DDD602-6CF7-42BF-B6D9-DB9EB7D4D5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DDD602-6CF7-42BF-B6D9-DB9EB7D4D5CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A7DDD602-6CF7-42BF-B6D9-DB9EB7D4D5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DDD602-6CF7-42BF-B6D9-DB9EB7D4D5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92FCC8C2-085E-4EFA-896E-F1F46F4A1218}
+	EndGlobalSection
+EndGlobal

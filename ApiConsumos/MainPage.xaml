@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApiConsumos.MainPage">
+
+    <VerticalStackLayout Padding="20">
+
+        <Button Text="Cargar Todos"
+                Clicked="OnLoadTodosClicked" />
+
+        <CollectionView x:Name="TodosListView"
+                        Margin="0,20,0,0" SelectionMode="Single" >
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="LightGray"
+                            StrokeShape="RoundRectangle 8"
+                            Margin="0,5,0,0"
+                            Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" />
+                            <Label Text="{Binding Status, StringFormat='Completado: {true}'}" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
